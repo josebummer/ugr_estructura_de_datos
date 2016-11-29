@@ -1,0 +1,49 @@
+10 23698e-05
+100 49878e-05
+500 52772e-05
+1000 68788e-05
+5000 276975e-05
+10000 516313e-05
+25000 1159786e-05
+50000 2731869e-05
+75000 3412568e-05
+100000 4510500e-05
+130000 5839102e-05
+
+
+
+
+Eficiencia:
+
+El método erase es un método que toma como argumento un chr y pos, o una ID, busca su mutación asociada y la elimina.
+
+Se usa un bucle desde 0 hasta el tamaño del vector, que para si se ha encontrado la mutación que buscamos, eliminándola con vm.erase().
+
+La eficiencia teórica sería el producto de O(n) y de la eficiencia de vm.erase(), que no se sabe.
+
+
+
+
+bool conjunto::erase(const string & chr, const unsigned int & pos){
+  bool borrado = false;							
+  for ( int i = 0; i < vm.size() && !borrado; i++ ){			O(n*O(erase))
+    if ( vm[i].getChr() == chr && vm[i].getPos() == pos ){		
+      vm.erase(vm.begin()+i);						No se sabe la eficiencia de vm.erase(...)
+      borrado = true;
+    }
+  }
+  return borrado;
+}
+
+
+bool conjunto::erase(const string & ID){
+    bool esta = false;
+    for( int i=0; i<vm.size() && !esta; i++ ){
+        if( vm[i].getID() == ID ){
+            esta = true;
+            vm.erase(vm.begin()+i);
+	}
+    }
+    return esta;
+}
+
