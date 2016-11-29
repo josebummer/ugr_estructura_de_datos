@@ -1,0 +1,26 @@
+
+
+for( int i = 0; i < vm.size() && !encontrado; i++ ){  //  O(n)
+    if(vm[i].getID() == ID){
+      resultado.first = vm[i];  
+      resultado.second = true;
+      encontrado = true;
+    }
+  }
+  if( !encontrado ){
+    mutacion a;
+    resultado.first = a;
+    resultado.second = false;
+  }
+  return resultado;
+  
+  
+ --> EFICIENCIA TEÓRICA:
+ 
+ En este método busca una mutación en un vector de mutaciones cuya ID coincida con otra ID que debe ser indicada como parámetro del método.
+ 
+ Nuestro algoritmo recorre el vector desde la primera posición, hasta que encuentre una mutación cuya ID coincida con la que queremos buscar, llegando hasta la última posición en el caso de que no la encuentre.
+ 
+ Nuestro bucle itera desde i = 0, hasta i < n, y la eficiencia del código que se encuentra en su interior es O(1), por lo tanto, podemos decir que la eficiencia de nuestro algoritmo de búsqueda es O(n.)
+ 
+ Somos conscientes de que el algoritmo implementado no es lo mas eficiente que podría ser, podriamos haber usado cualquier otro algoritmo de búsqueda mas eficiente que la búsqueda secuencial, como la búsqueda binaria entre otros, pero como el find no se ejecutaba muchas veces en nuestro programa principal(2 veces), hemos decidido dejarlo con busqueda secuencial, mientras que otros métodos que son muchas mas veces llamados en nuestro main, los hemos implementado con algoritmos más eficientes, como por ejemplo el metodo insert, que es llamado una vez por cada linea a leer del fichero de datos. 
