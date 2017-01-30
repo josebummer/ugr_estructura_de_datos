@@ -3,7 +3,7 @@ SRC = src
 OBJ = obj
 BIN = bin
 
-all: $(BIN)/ejercicio1 $(BIN)/ejercicio2 $(BIN)/ejercicio3 $(BIN)/ejercicio4 $(BIN)/ejercicio5
+all: $(BIN)/ejercicio1 $(BIN)/ejercicio2 $(BIN)/ejercicio3 $(BIN)/ejercicio4 $(BIN)/ejercicio18
 
 $(BIN)/ejercicio1: $(OBJ)/ejercicio1.o
 	${CXX} -o $(BIN)/ejercicio1 $(OBJ)/ejercicio1.o
@@ -34,6 +34,12 @@ $(BIN)/ejercicio5: $(OBJ)/ejercicio5.o
 
 $(OBJ)/ejercicio5.o: $(SRC)/ejercicio5.cpp $(INC)/bintree.h
 	${CXX} -c $(SRC)/ejercicio5.cpp -o $(OBJ)/ejercicio5.o -I$(INC)
+
+$(BIN)/ejercicio18: $(OBJ)/ejercicio18.o
+	${CXX} -o $(BIN)/ejercicio18 $(OBJ)/ejercicio18.o
+
+$(OBJ)/ejercicio18.o: $(SRC)/ejercicio18.cpp $(INC)/bintree.h
+	${CXX} -c $(SRC)/ejercicio18.cpp -o $(OBJ)/ejercicio18.o -I$(INC)
 
 clean:
 	rm $(OBJ)/*.o $(BIN)/*
