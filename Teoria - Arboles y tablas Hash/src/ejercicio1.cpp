@@ -15,6 +15,7 @@ typename bintree<T>::node recorridoporNiveles(const bintree<T> &A, const typenam
     if( i == A.size()-1 )
       return *it;
   }
+  //recorrido por niveles con cola
 }
 
 int main(){
