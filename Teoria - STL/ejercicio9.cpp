@@ -60,6 +60,7 @@ int main(){
   l1.push_back(1);
   l1.push_back(5);
   l1.push_back(8);
+  l1.push_back(9);
   l1.push_back(12);
 
   l2.push_back(2);
@@ -70,18 +71,24 @@ int main(){
   mezcla = mezclar(l1,l2);
 
   cout << "La lista1 es: " << endl;
+  cout << "< ";
   for( it = l1.begin(); it != l1.end(); ++it ){
-    cout << *it << endl;
+    cout << *it << " ";
   }
+  cout << ">" << endl;
 
   cout << "La lista2 es: " << endl;
+  cout << "< ";
   for( it = l2.begin(); it != l2.end(); ++it ){
-    cout << *it << endl;
+    cout << *it << " ";
   }
+  cout << ">" << endl;
 
   cout << "La mezcla es: " << endl;
+  cout << "< ";
   for( it = mezcla.begin(); it != mezcla.end(); ++it ){
-    cout << *it << endl;
+    cout << *it << " ";
   }
+  cout << ">" << endl;
 
 }
