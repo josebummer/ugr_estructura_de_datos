@@ -1,6 +1,7 @@
 /**
 Crear una funcion que muestre los nodos de un nivel concreto de forma no recursiva.
 Implente tambien los demas recorridos
+Implementa una funcion que calcule el numero de nodos
 */
 #include <iostream>
 #include <queue>
@@ -59,6 +60,14 @@ void RecorridoInodenRecursivo(const bintree<T> &A, typename bintree<T>::node n){
   }
 }
 
+template<typename T>
+int nNodos(const bintree<T> &A , typename bintree<T>::node n){
+  if( !n.null() ){
+    return 1+(nNodos(A,n.left())+nNodos(A,n.right()));
+  }
+  else return 0;
+}
+
 int main(){
   bintree<int> prueba(7);
 
@@ -90,4 +99,7 @@ int main(){
 
   cout << endl << "Mostrar el arbol en Inorden:" << endl;
   RecorridoInodenRecursivo(prueba,prueba.root());
+
+  cout << endl << "Mostrar el numero de nodos:" << endl;
+  cout << nNodos(prueba,prueba.root()) << endl;
 }
