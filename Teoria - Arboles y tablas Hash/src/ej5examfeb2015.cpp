@@ -40,6 +40,7 @@ bool simetricos(const bintree<T> &a, const bintree<T> &b){
 
 ///////////////////////// FOMRMA MAS EFICIENTE//////////////////////////////////
 
+template<typename T>
 bool auxsim( const bintree<T> &a, const typename bintree<T>::node &na, const bintree<T> &b, const typename bintree<T>::node &nb ){
   if( !na.null() && !nb.null() ){
     if( *na == *nb ){
