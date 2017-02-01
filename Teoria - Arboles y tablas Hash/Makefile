@@ -3,7 +3,7 @@ SRC = src
 OBJ = obj
 BIN = bin
 
-all: $(BIN)/ejercicio1 $(BIN)/ejercicio2 $(BIN)/ejercicio3 $(BIN)/ejercicio4 $(BIN)/ejercicio18 $(BIN)/ejercicio7 $(BIN)/ejercicioexamen
+all: $(BIN)/ejercicio1 $(BIN)/ejercicio2 $(BIN)/ejercicio3 $(BIN)/ejercicio4 $(BIN)/ejercicio18 $(BIN)/ejercicio7 $(BIN)/ejercicioexamen $(BIN)/ej5examfeb2015 $(BIN)/ej2examfeb2015
 
 $(BIN)/ejercicio1: $(OBJ)/ejercicio1.o
 	${CXX} -o $(BIN)/ejercicio1 $(OBJ)/ejercicio1.o
@@ -52,6 +52,18 @@ $(BIN)/ejercicioexamen: $(OBJ)/ejercicioexamen.o
 
 $(OBJ)/ejercicioexamen.o: $(SRC)/ejercicioexamen.cpp $(INC)/bintree.h
 	${CXX} -c $(SRC)/ejercicioexamen.cpp -o $(OBJ)/ejercicioexamen.o -I$(INC)
+
+$(BIN)/ej5examfeb2015: $(OBJ)/ej5examfeb2015.o
+	${CXX} -o $(BIN)/ej5examfeb2015 $(OBJ)/ej5examfeb2015.o
+
+$(OBJ)/ej5examfeb2015.o: $(SRC)/ej5examfeb2015.cpp $(INC)/bintree.h
+	${CXX} -c -std=c++11 $(SRC)/ej5examfeb2015.cpp -o $(OBJ)/ej5examfeb2015.o -I$(INC)
+
+$(BIN)/ej2examfeb2015: $(OBJ)/ej2examfeb2015.o
+	${CXX} -o $(BIN)/ej2examfeb2015 $(OBJ)/ej2examfeb2015.o
+
+$(OBJ)/ej2examfeb2015.o: $(SRC)/ej2examfeb2015.cpp $(INC)/bintree.h
+	${CXX} -c -std=c++11 $(SRC)/ej2examfeb2015.cpp -o $(OBJ)/ej2examfeb2015.o -I$(INC)
 
 clean:
 	rm $(OBJ)/*.o $(BIN)/*

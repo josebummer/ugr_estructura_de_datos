@@ -1,5 +1,5 @@
 /**
-Escribe una funcion a la que se ke pase un arbol y un nodo y devuelva el nodo a la derecha
+Escribe una funcion a la que se quee pase un arbol y un nodo y devuelva el nodo a la derecha
 del nodo que se pasa como argumento.
 */
 
