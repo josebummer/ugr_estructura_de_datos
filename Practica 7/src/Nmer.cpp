@@ -316,7 +316,6 @@ float Nmer::Distance(const Nmer &otro) const{
       resotro.insert(*it);
   }
 
-  typename set <pair<string,int>,OrdenDecre >::iterator it2;
   int i = 1;
   float dist = 0;
   int posx,posy,valor;
