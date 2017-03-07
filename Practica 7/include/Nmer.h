@@ -3,8 +3,7 @@
  * @file Nmer.h
  * @brief TDA Nmer
  *   Representa un conjunto de Nmer subsecuencias de tamaño 1 hasta N que se pueden obtener a partir de una cadena de ADN
- * @author alumno
- * @bug Por espeficicar
+ * @author Jose Antonio Ruiz Millan
  */
 #ifndef __NMER_H
 #define __NMER_H
