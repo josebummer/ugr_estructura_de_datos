@@ -1,3 +1,10 @@
+/*
+Creado por: Jose Antonio Ruiz.
+
+Practica 7 ED :
+Universidad de Granada
+*/
+
 #include <iostream>
 #include <string>
 #include <queue>
