@@ -4,6 +4,6 @@ PARA ALGUNAS DE LAS PRACTICAS RECUERDEN QUE LAS CARPETAS VACIAS NO SE ALMACENAN,
 
 Desde la practica 1 hasta la 5 estan realizadas con la colaboracion de:
 
-Julio Antonio Fresneda Garcia --> https://github.com/juliofg17
+Julio Antonio Fresneda Garcia --> https://github.com/juliofgx17
 
 Adrian Pelaez Vegas --> https://github.com/Adri6
